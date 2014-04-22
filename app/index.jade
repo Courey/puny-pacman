@@ -2,10 +2,19 @@ doctype html
 html(lang='en')
   head
     meta(charset='utf-8')
-    title Client Template
+    title Piddly Pac-Man
     link(rel='stylesheet', href='./css/app.css')
   body
-    h1 Client Template
+    h1 Piddly Pac-Man
+
+    button#start start
+
+    table#game
+      tbody
+        -for(var r = 0; r < 3; r++)
+          tr
+            -for(var c = 0; c < 2; c++)
+              td(data-positionx = c, data-positiony = r)
 
     script(src='./js/vendor/jquery-2.1.0.js')
     script(src='./js/source/main.js')
